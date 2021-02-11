@@ -52,6 +52,26 @@ public class MyDoublyLinkedList<E> {
 		
 	}
 	
+	void deleteNode(Node<E> del) {
+		if(head==null || del==null)
+			return;
+		
+		if(head==del) {
+			head = del.next;
+		}
+		
+		if(del.next!=null) {
+			del.next.prev = del.prev;
+		}
+		
+		if(del.prev!=null) {
+			del.prev.next = del.next;
+		}
+		
+		return;
+		
+	}
+	
 	boolean isEmpty() {
 		return head==null;	
 	}

@@ -36,6 +36,7 @@ public class MyBinaryTree {
 	}
 	
 	static void inOrder(Node root) {
+		//LNR
 		if(root == null)
 			return;
 		inOrder(root.left);
@@ -44,6 +45,7 @@ public class MyBinaryTree {
 	}
 
 	static void preOrder(Node root) {
+		//NLR
 		if(root == null)
 			return;
 		System.out.print(root.data+" ");
@@ -52,6 +54,7 @@ public class MyBinaryTree {
 	}
 
 	static void postOrder(Node root) {
+		//LRN
 		if(root == null)
 			return;
 		postOrder(root.left);
