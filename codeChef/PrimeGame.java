@@ -130,10 +130,10 @@ public class PrimeGame {
 
 
 	public static void main(String[] args) throws Exception{
-		Reader s = new Reader();
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		Reader r = new Reader();
+		PrintWriter w = new PrintWriter(System.out);
 		try {
-			int t = s.nextInt();
+			int t = r.nextInt();
 			boolean bIsPrime[] = sieveOfEratosthenes(1000000);
 			int isPrime[] = new int[1000001];
 			isPrime[0] = isPrime[1] = 0;
@@ -144,16 +144,16 @@ public class PrimeGame {
 				isPrime[i] = count;
 			}
 			while(t-->0) {
-				int x = s.nextInt();
-				int y = s.nextInt();
+				int x = r.nextInt();
+				int y = r.nextInt();
 				String ans = isPrime[x]>y?"Divyam":"Chef";
-				bw.write(ans+"\n");
-				bw.flush();
+				w.println(ans);
+				w.flush();
 			}
 		}catch(Exception e) {
 			return;
 		}
-		bw.close();
+		w.close();
 	}
 	
 	static boolean[] sieveOfEratosthenes(int n) {
