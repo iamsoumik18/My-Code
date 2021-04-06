@@ -20,7 +20,7 @@ public class ChefandDice {
 					}else if(r==1) {
 						ans = (q*44) + 12 + 20;
 					}else if(r==2) {
-						ans = (q*44) + 8 + 36; // (q*36) + 12 + 40
+						ans = (q*44) + 8 + 36;
 					}else if(r==3) {
 						ans = (q*44) + 4 + 51;
 					}
@@ -28,7 +28,7 @@ public class ChefandDice {
 					if(r==1) {
 						ans = 20;
 					}else if(r==2) {
-						ans = 36; // 40
+						ans = 36;
 					}else if(r==3) {
 						ans = 51;
 					}

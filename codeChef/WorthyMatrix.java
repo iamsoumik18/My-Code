@@ -14,11 +14,11 @@ public class WorthyMatrix {
 				int n = Integer.parseInt(s1[0]);
 				int m = Integer.parseInt(s1[1]);
 				int k = Integer.parseInt(s1[2]);
-				int a[][] = new int[n][m];
+				long a[][] = new long[n][m];
 				for(int i=0; i<n; i++) {
 					String s2[] = br.readLine().split(" ");
 					for(int j=0; j<m; j++) {
-						a[i][j] = Integer.parseInt(s2[j]);
+						a[i][j] = Long.parseLong(s2[j]);
 					}
 				}
 				long ans = solution2(n,m,k,a);
@@ -58,9 +58,9 @@ public class WorthyMatrix {
 		return ans;
 		
 	}
-	static long solution2(int n, int m, int k, int a[][]) {
+	static long solution2(int n, int m, int k, long a[][]) {
 		
-		int pSum[][] = new int[n+1][m+1];
+		long pSum[][] = new long[n+1][m+1];
 		
 		for(int i=1; i<=n; i++) {
 			for(int j=1; j<=m; j++) {
