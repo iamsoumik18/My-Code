@@ -18,23 +18,19 @@ public class FractionalKnapsack {
 			int n = Integer.parseInt(s[0]);
 			int W = Integer.parseInt(s[1]);
 			
-			String st[] = br.readLine().split(" ");
+			String st1[] = br.readLine().split(" ");
 			
 			int v[] = new int[n];
 			int wt[] = new int[n];
 			
-			int x = 0;
-			
-			for(int i = 0; i<2*n; i=i+2) {
-				v[x] = Integer.parseInt(st[i]);
-				x++;
+			for(int i = 0; i<n; i++) {
+				v[i] = Integer.parseInt(st1[i]);
 			}
 			
-			x = 0;
+			String st2[] = br.readLine().split(" ");
 			
-			for(int j=1; j<2*n; j=j+2) {
-				wt[x] = Integer.parseInt(st[j]);
-				x++;
+			for(int i=0; i<n; i++) {
+				wt[i] = Integer.parseInt(st2[i]);
 			}
 			
 			float result = solution(n, W, v, wt);
