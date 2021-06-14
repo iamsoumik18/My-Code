@@ -1,4 +1,4 @@
-package introduction;
+package practice;
 import java.util.*;
 
 public class ReverseOfString {
